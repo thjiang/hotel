@@ -23,7 +23,6 @@ a {
 
 html, body {
     height: 100%;
-    background-color: #e2f2fa;
 }
 
 .clear {
@@ -32,10 +31,38 @@ html, body {
 </style>
 
 <template>
-    <section class="app">
-        <!-- <router-link to="/" exact>首页</router-link>
+    <div class="nav">
+        <router-link to="/" exact>首页</router-link>
+        <router-link to="/create" exact>新建活动</router-link>
         <router-link to="/test" exact>测试模块</router-link>
-        <router-link to="/async" exact>异步组件</router-link> -->
+        <router-link to="/async" exact>异步组件</router-link>
         <router-view></router-view>
-    </section>
+    </div>
 </template>
+
+<script>
+import util from './common/util';
+
+export default {
+    data: function() {
+        return {
+            data: 1
+        };
+    },
+    methods: {
+        active() {
+
+        }
+    },
+    watch: {
+        '$route': {
+            handler(newData) {
+                this.data = newData;
+            }
+        }
+    },
+    mounted() {
+        console.log(util.getCookie('a'));
+    }
+};
+</script>

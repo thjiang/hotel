@@ -1,5 +1,5 @@
-import index from './components/index.vue';
-import test from './components/mytest.vue';
+import index from './views/index.vue';
+import test from './views/mytest.vue';
 
 export default {
     routes: [{
@@ -11,9 +11,9 @@ export default {
     }, {
         path: '/test',
         component: test
-    }, {
-        path: '/async',
-        component: () =>
-            import ( /* webpackChunkName: "async" */ './components/async.vue')
+    // }, {
+    //     path: '/async',
+    //     component: () =>
+    //         import ( /* webpackChunkName: "async" */ './views/async.vue')
     }]
-}
+};

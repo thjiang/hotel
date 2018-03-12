@@ -6,9 +6,9 @@ const path = require('path');
 module.exports = {
     entry: {
         bundle: [
-            // 'iview',
-            'element-ui',
+            // 'element-ui',
             // 'element-ui/lib/theme-chalk/index.css',
+            'iview',
             'vue',
             'vue-router'
         ]
@@ -18,6 +18,7 @@ module.exports = {
         filename: '[name].dll.js',
         library: '[name]_library'
     },
+    mode: 'production',
     // module: {
     //     loaders: [{
     //         test: /\.css$/,
