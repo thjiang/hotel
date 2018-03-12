@@ -24,7 +24,7 @@ export default {
     data: function() {
         return {
             page: '异步模块'
-        }
+        };
     }
-}
+};
 </script>

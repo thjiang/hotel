@@ -24,7 +24,7 @@ export default {
     data: function() {
         return {
             page: '测试模块'
-        }
+        };
     }
-}
+};
 </script>

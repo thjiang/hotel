@@ -12,5 +12,5 @@ npm run dev
 ### 生产环境打包
 
 ```
-npm run prod
+npm run build
 ```
