@@ -5,10 +5,10 @@
     "author": "browserify@qq.com",
     "main": "main.js",
     "scripts": {
-        "dev": "NODE_ENV=dev webpack-dev-server --progress",
-        "wdev": "set NODE_ENV=dev && webpack-dev-server --progress",
-        "build": "NODE_ENV=prod webpack",
-        "wbuild": "set NODE_ENV=prod && webpack",
+        "dev": "NODE_ENV=dev webpack-dev-server --progress --mode development",
+        "wdev": "set NODE_ENV=dev && webpack-dev-server --progress --mode development",
+        "build": "NODE_ENV=prod webpack --mode production",
+        "wbuild": "set NODE_ENV=prod && webpack --mode production",
         "dll": "webpack --config webpack.dll.config.js"
     },
     "devDependencies": {

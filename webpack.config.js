@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const manifest = require('./build/static/dll/bundle-manifest.json');
 
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; // webpack 性能分析
 // const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -10,14 +11,12 @@ let cdnpath = "http://localhost:9091/build";
 let bundlecdnpath = "http://localhost:9091/build/static";
 let publicPath = '/build/';
 let filename = 'pages/index.html';
-let mode = 'development';
 
 if (env === "prod") {
     cdnpath = "https://c.icewish.top";
     publicPath = cdnpath + '/';
     bundlecdnpath = cdnpath;
     filename = path.join(__dirname, 'build/pages/index.html');
-    mode = 'production';
 }
 
 module.exports = {
@@ -30,7 +29,6 @@ module.exports = {
 		filename: 'main.js',
         publicPath: publicPath
     },
-    mode: mode,
 	module: {
         rules: [{
             test: /\.css$/,
@@ -56,7 +54,8 @@ module.exports = {
 	plugins: [
         new webpack.DllReferencePlugin({
             context: __dirname,
-            manifest: require('./build/static/dll/bundle-manifest.json')
+            // manifest: require('./build/static/dll/bundle-manifest.json')
+            manifest: manifest
         }),
         new HtmlWebpackPlugin({
             inject: false,

@@ -1,25 +1,22 @@
 <style lang="less">
-    .search-wrap{
+    .cityBox{
         width: 850px;
         margin: 30px auto 20px;
-        height: 64px;
-        line-height: 64px;
-        background-color: #fff;
     }
 </style>
 
 <template>
-    <section class="search-wrap">
+    <section class="cityBox">
 
     </section>
 </template>
 
 <script>
 export default {
-    name: 'search',
+    name: 'cityBox',
     data: function() {
         return {
-            page: "search"
+            page: "cityBox"
         };
     }
 };

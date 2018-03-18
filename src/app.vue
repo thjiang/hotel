@@ -31,11 +31,11 @@ html, body {
 </style>
 
 <template>
-    <div class="nav">
-        <router-link to="/" exact>首页</router-link>
+    <div id="app" class="app">
+        <!-- <router-link to="/" exact>首页</router-link>
         <router-link to="/create" exact>新建活动</router-link>
         <router-link to="/test" exact>测试模块</router-link>
-        <router-link to="/async" exact>异步组件</router-link>
+        <router-link to="/async" exact>异步组件</router-link> -->
         <router-view></router-view>
     </div>
 </template>
@@ -62,7 +62,9 @@ export default {
         }
     },
     mounted() {
-        console.log(util.getCookie('a'));
+        if (util.getCookie('a')) {
+            console.log(util.getCookie('a'));
+        }
     }
 };
 </script>
