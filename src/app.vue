@@ -1,7 +1,7 @@
 <style lang="less">
 body {
     font-size: 16px;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
         "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     -webkit-text-size-adjust: 100%;
 }

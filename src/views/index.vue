@@ -16,6 +16,7 @@
             // line-height: 60px;
             color: #fff;
             text-align: left;
+            -webkit-font-smoothing: subpixel-antialiased;
         }
     }
     .recommend {

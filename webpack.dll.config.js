@@ -3,6 +3,10 @@ const path = require('path');
 // const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // 不再打包CSS，直接使用link标签引入
 
+let mode = "production";
+const env = process.env.NODE_ENV.trim();
+env === "dev" ? mode = "development" : null;
+
 module.exports = {
     entry: {
         bundle: [
@@ -18,7 +22,7 @@ module.exports = {
         filename: '[name].dll.js',
         library: '[name]_library'
     },
-    mode: 'production',
+    mode: mode,
     // module: {
     //     loaders: [{
     //         test: /\.css$/,

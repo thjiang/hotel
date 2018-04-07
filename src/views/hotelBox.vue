@@ -31,12 +31,14 @@
                     font-weight: 100;
                     font-size: 24px;
                     text-shadow: 1px 1px 8px #005aff;
+                    -webkit-font-smoothing: subpixel-antialiased;
                 }
                 p {
                     margin-top: 10px;
                     font-weight: 100;
                     font-size: 20px;
                     text-shadow: 1px 1px 8px #6e00ff;
+                    -webkit-font-smoothing: subpixel-antialiased;
                 }
             }
         }

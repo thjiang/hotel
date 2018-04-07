@@ -7,9 +7,10 @@
     "scripts": {
         "dev": "NODE_ENV=dev webpack-dev-server --progress --mode development",
         "wdev": "set NODE_ENV=dev && webpack-dev-server --progress --mode development",
-        "build": "NODE_ENV=prod webpack --mode production",
-        "wbuild": "set NODE_ENV=prod && webpack --mode production",
-        "dll": "webpack --config webpack.dll.config.js"
+        "build": "NODE_ENV=prod webpack --config webpack.dll.config.js && NODE_ENV=prod webpack --mode production",
+        "wbuild": "set NODE_ENV=prod webpack --config webpack.dll.config.js && webpack --mode production",
+        "devdll": "NODE_ENV=dev webpack --config webpack.dll.config.js",
+        "proddll": "NODE_ENV=prod webpack --config webpack.dll.config.js"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
@@ -24,6 +25,7 @@
         "eslint-plugin-import": "^2.9.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.7.0",
+        "eslint-plugin-vue": "^4.4.0",
         "html-webpack-plugin": "^3.0.6",
         "less": "^3.0.1",
         "less-loader": "^4.1.0",
