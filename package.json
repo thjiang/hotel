@@ -10,6 +10,7 @@
         "build": "NODE_ENV=prod webpack --config webpack.dll.config.js && NODE_ENV=prod webpack --mode production",
         "wbuild": "set NODE_ENV=prod webpack --config webpack.dll.config.js && webpack --mode production",
         "devdll": "NODE_ENV=dev webpack --config webpack.dll.config.js",
+        "wdevdll": "set NODE_ENV=dev && webpack --config webpack.dll.config.js",
         "proddll": "NODE_ENV=prod webpack --config webpack.dll.config.js"
     },
     "devDependencies": {

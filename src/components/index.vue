@@ -4,7 +4,7 @@
     width: 100%;
     text-align: center;
     // background: linear-gradient(to right,#4ac1ed 0,#6c8ad7 33%,#ffb991 66%,#ffa8b3 100%);
-    background: linear-gradient(to right,#ffb991 0, #ffa8b3 100%);
+    background: linear-gradient(to right, #ffb991 0, #ffa8b3 100%);
 
     .content {
         width: 850px;
@@ -31,7 +31,6 @@
             cursor: pointer;
         }
     }
-    
 }
 </style>
 
@@ -43,7 +42,11 @@
             </section>
             <search></search>
             <ul class="recommend">
-                <li>万豪</li><li>喜达屋</li><li>凯悦</li><li>希尔顿</li><li>洲际</li>
+                <li>万豪</li>
+                <li>喜达屋</li>
+                <li>凯悦</li>
+                <li>希尔顿</li>
+                <li>洲际</li>
             </ul>
         </header>
         <section>
@@ -56,9 +59,9 @@
 </template>
 
 <script>
-import search from './search.vue';
-import cityBox from './cityBox.vue';
-import hotelBox from './hotelBox.vue';
+import search from "./search.vue";
+import cityBox from "./cityBox.vue";
+import hotelBox from "./hotelBox.vue";
 
 export default {
     data: function() {
